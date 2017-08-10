@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Good food</title>
+  <link rel="stylesheet" href="css/main.min.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<div id="my-page">
+
+  <div id="my-header">
+    <header>
+      <div class="actv"><a href="#my-menu" class="hamburger hamburger--spin ham2">
+      <span class="hamburger-box"><span class="hamburger-inner"></span></span></div>
+    </a>
+      <div class="line-menu">
+        <div class="dot"><i class="fa fa-ellipsis-v" aria-hidden="true"></i></div>
+        <div class="home">Home</div>
+        <a href="#my-menu" class="hamburger hamburger--spin ham2">
+        <span class="hamburger-box"><span class="hamburger-inner"></span></span>
+      </a>
+      </div>
+      <div class="conteiner">
+        <div class="top_line">
+          <div class="logo">
+            <img class="logo-img "src="../img/2.png" alt="good food">
+            <div class="wrap">
+            <h6>Good Food</h6>
+            <p>Recipes</p>
+          </div>
+          </div>
+          <div class="info">
+              <div class="adres">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <a href="#">2130 Fulton Street San<br>Diego, CA 94117-1080 USA</a>
+              </div>
+              <div class="telefon">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <a href="#">1-800-1234-567,</a><br>
+                <a href="#">1-800-6547-321</a>
+              </div>
+              <nav id="my-menu">
+                <ul>
+                  <li><a href="#">Home</a></li>
+                  <li><a href="#">Elements</a></li>
+                  <li><a href="#">Pages</a></li>
+                  <li><a href="#">News</a></li>
+                  <li><a href="#">Recipes</a></li>
+                  <li><a href="#">Shop</a></li>
+                  <li><a href="#">Donate</a></li>
+                  <li><a href="#">Contacts</a></li>
+                </ul>
+              </nav>
+          </div>
+        </div>
+          <div class="middle">
+              <div class="middle-wrap">
+                <a href="#"><h1>Moroccan Carrot Salad with Feta</h1></a>
+                <p>Bored with the same old salad? You’ll love this easy-to-cook recipe, which combines ingredients you probably already have in your kitchen in new and interesting ways.</p>
+                <a href="#" class="button">View Recipe</a>
+              </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+  <div id="my-content">
+    <div class="food">
+      <div id="food" class="conteiner">
+        <div class="welcome">
+          <h2 class="animated slideInLeft">Welcome to Good Food</h2>
+          <p class="animated slideInLeft">Good Food is a unique resource, designed as a single place for new
+             recipes lovers and food enthusiasts. It features the largest collection
+              of professionally-tested recipes online from food experts at the
+              magazines and cookbooks you love and trust--including Cooking Light,
+              Southern Living, Sunset, Coastal Living, Real Simple, and more.</p>
+              <a href="#" class="button">Learn More</a>
+        </div>
+        <div class="imgg">
+          <img src="img/3.jpg" alt="Good Food" class="maso  animated zoomIn">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="my-footer"></div>
+
+</div>
+
+<script src="js/common.js"></script>
+<script src="libs/jquery/dist/jquery.min.js"></script>
+<script src="libs/jQuery.mmenu/dist/jquery.mmenu.all.js"></script>
+<script>
+$("#my-menu").mmenu({
+  offCanvas: {
+    position: 'right'
+  },
+  navbar: {
+    title: '<img src="img/2.png">'
+  }
+});
+
+  var api = $('#my-menu').data('mmenu');
+
+  api.bind('open:finish', function() {
+    $('.hamburger').addClass('is-active');
+  });
+  api.bind('close:finish', function() {
+    $('.hamburger').removeClass('is-active');
+  });
+</script>
+</body>
+</html>

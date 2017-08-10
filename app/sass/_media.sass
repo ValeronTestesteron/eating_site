@@ -3,25 +3,150 @@
 
 
 /* large Devices, Wide Screens */
-@media only screen and (max-width : 1200px)
-/**/
+@media only screen and (max-width : 1200px){}
+
+
+@media only screen and (max-width : 1185px)
+  .maso
+    width: 350px
+    height: 230px
+
+@media only screen and (max-width : 1080px)
+  .middle
+    margin: 0 auto
+    width: 85%
+  .info
+    flex-basis: 55%
+
+  .imgg
+    padding: 0
+    padding-top: 50px
+    position: relative
+    right: 0
+
+
 
 
 /* Medium Devices, Desktop */
 @media only screen and (max-width : 992px)
-/**/
+  .middle
+    margin: 0 auto
+    width: 85%
+  .info
+    flex-basis: 55%
+
+  .maso
+    width: 270px
+    height: 170px
+
+  .imgg
+    margin: 0
+
+  #food
+    width: 700px
+
+  .top_line
+    display: none
+
+  .line-menu
+    margin-top: -20px
+    display: flex
+    background-color: #fff
+    justify-content: space-between
+    align-items: center
+    box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.2)
+    .home
+      color: $Green_color
+      font-weight: bold
+      font-family: "Merriweather"
+
+  .actv
+    display: none
+    padding: 0
+    margin: 0
+
+  .hamburger
+    position: relative
+    top: 0
+    padding: 0
+    .hamburger-box
+      box-shadow: none
+      .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+        background-color: $Orange_color
+        border-radius: 2px
+
+  .dot
+    margin-left: 30px
+    & .fa
+      font-size: 20px
+      border-radius: 50%
+
+  .middle
+    margin-top: 55px
+    width: 85%
+    .middle-wrap
+       text-align: center
+       h1
+        font-size: 2.3em
+
+
+@media only screen and (max-width : 890px)
+  .middle
+    margin-top: 55px
+    width: 95%
+    .middle-wrap
+       text-align: center
+       h1
+        font-size: 2.3em
+
 
 
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-/**/
+  #food
+    width: 450px
+    flex-direction: column
+    justify-content: center
+    .welcome
+      order: 2
+      text-align: center
+      h2
+        font-size: 2em
+      p
+        font-size: 0.9em
+  .maso
+    width: 100%
+    height: auto
+    order: 1
 
+@media only screen and (max-width : 690px)
+  .middle .middle-wrap
+    padding: 30px 20px 35px 20px
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
-/**/
+  #food
+    width: 88%
+
+  .middle
+    margin-top: 0
+    width: 100%
+    .middle-wrap
+       text-align: center
+       h1
+        font-size: 1.6em
+       p
+        margin-top: 18px
 
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
-/**/
+  .middle
+    margin-top: 0
+    width: 100%
+    .middle-wrap
+       text-align: center
+       h1
+        font-size: 1.6em
+       p
+        margin-top: 18px
