@@ -223,9 +223,9 @@ h2
   display: inline-block
   vertical-align: middle
   text-align: center
-  padding-top: 130px
+  margin-top: 140px
   p
-    margin-top: 60px
+    margin-top: 10px
     font-size: 0.8em
     line-height: 22px
     color: #2d2e2e
@@ -244,17 +244,19 @@ h2
       height: auto
 
 .great-recieps
-  .h2-zagoolovo::after
-    content: ''
-    display: inline-block
-    vertical-align: middle
-    box-sizing: border-box
-    width: 17%
-    height: 2px
-    background: #2d2e2e
-    border: solid #FFF
-    border-width: 0 10px
-    margin-top: 30px
+  .h2-zagoolovo
+    margin-top: 0
+    &::after
+      content: ''
+      display: inline-block
+      vertical-align: middle
+      box-sizing: border-box
+      width: 17%
+      height: 3px
+      background: #2d2e2e
+      border: solid #FFF
+      border-width: 0 10px
+      margin-top: 30px
 
 .name-recipes
   padding: 20px 10px 20px 10px
@@ -273,13 +275,14 @@ h2
   height: auto
   text-align: center
   .great-recieps
-    padding-top: 50px
+    padding-top: 0
+    margin-top: 50px
     .h2-zagoolovo::after
       background-color: $Green_color
       width: 12%
   .select
     margin-top: 50px
-    padding-bottom: 30px
+    margin-bottom: 40px
     display: flex
     justify-content: space-around
     flex-wrap: wrap
@@ -296,15 +299,14 @@ h2
 #learn-cook
   height: auto
 
-.wrap
+.wrap-lr
   padding: 0
   display: flex
   justify-content: center
   align-items: center
   .great-recieps
-    margin-top: 60px
-    padding-bottom: 100px
-    margin-bottom: 60px
+    margin-top: 220px
+    margin-bottom: 220px
     .h2-zagoolovo
       color: #fff
       &::after

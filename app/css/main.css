@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Merriweather:700");
 @import url("https://fonts.googleapis.com/css?family=Merriweather:900");
-#food .welcome a, .wrap .great-recieps a, #latest-recipes-continer a {
+#food .welcome a, .wrap-lr .great-recieps a, #latest-recipes-continer a {
   margin-top: 20px;
   color: #fff;
   font-size: .9em;
@@ -10,7 +10,7 @@
   -webkit-transition: .2s ease-in-out;
   -o-transition: .2s ease-in-out;
   transition: .2s ease-in-out; }
-  #food .welcome a:hover, .wrap .great-recieps a:hover, #latest-recipes-continer a:hover {
+  #food .welcome a:hover, .wrap-lr .great-recieps a:hover, #latest-recipes-continer a:hover {
     -webkit-transition: .2s ease-in-out;
     -o-transition: .2s ease-in-out;
     transition: .2s ease-in-out; }
@@ -8577,9 +8577,9 @@ h2 {
   display: inline-block;
   vertical-align: middle;
   text-align: center;
-  padding-top: 130px; }
+  margin-top: 140px; }
   .great-recieps p {
-    margin-top: 60px;
+    margin-top: 10px;
     font-size: 0.8em;
     line-height: 22px;
     color: #2d2e2e; }
@@ -8605,18 +8605,20 @@ h2 {
       width: 100%;
       height: auto; }
 
-.great-recieps .h2-zagoolovo::after {
-  content: '';
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  width: 17%;
-  height: 2px;
-  background: #2d2e2e;
-  border: solid #FFF;
-  border-width: 0 10px;
-  margin-top: 30px; }
+.great-recieps .h2-zagoolovo {
+  margin-top: 0; }
+  .great-recieps .h2-zagoolovo::after {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+    width: 17%;
+    height: 3px;
+    background: #2d2e2e;
+    border: solid #FFF;
+    border-width: 0 10px;
+    margin-top: 30px; }
 
 .name-recipes {
   padding: 20px 10px 20px 10px;
@@ -8639,13 +8641,14 @@ h2 {
   height: auto;
   text-align: center; }
   #spec-select .great-recieps {
-    padding-top: 50px; }
+    padding-top: 0;
+    margin-top: 50px; }
     #spec-select .great-recieps .h2-zagoolovo::after {
       background-color: #749c07;
       width: 12%; }
   #spec-select .select {
     margin-top: 50px;
-    padding-bottom: 30px;
+    margin-bottom: 40px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -8672,7 +8675,7 @@ h2 {
 #learn-cook {
   height: auto; }
 
-.wrap {
+.wrap-lr {
   padding: 0;
   display: -webkit-box;
   display: -webkit-flex;
@@ -8686,20 +8689,19 @@ h2 {
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center; }
-  .wrap .great-recieps {
-    margin-top: 60px;
-    padding-bottom: 100px;
-    margin-bottom: 60px; }
-    .wrap .great-recieps .h2-zagoolovo {
+  .wrap-lr .great-recieps {
+    margin-top: 220px;
+    margin-bottom: 220px; }
+    .wrap-lr .great-recieps .h2-zagoolovo {
       color: #fff; }
-      .wrap .great-recieps .h2-zagoolovo::after {
+      .wrap-lr .great-recieps .h2-zagoolovo::after {
         display: none; }
-    .wrap .great-recieps p {
+    .wrap-lr .great-recieps p {
       margin-bottom: 65px;
       color: #fff; }
-    .wrap .great-recieps a {
+    .wrap-lr .great-recieps a {
       background-color: #ef800d; }
-      .wrap .great-recieps a:hover {
+      .wrap-lr .great-recieps a:hover {
         background-color: #fff;
         color: #ef800d; }
 
@@ -8805,7 +8807,7 @@ h2 {
   margin-top: 20px;
   margin-bottom: 65px; }
 
-#food .welcome a, .wrap .great-recieps a, #latest-recipes-continer a {
+#food .welcome a, .wrap-lr .great-recieps a, #latest-recipes-continer a {
   margin-top: 20px;
   color: #fff;
   font-size: .9em;
@@ -8814,7 +8816,7 @@ h2 {
   -webkit-transition: .2s ease-in-out;
   -o-transition: .2s ease-in-out;
   transition: .2s ease-in-out; }
-  #food .welcome a:hover, .wrap .great-recieps a:hover, #latest-recipes-continer a:hover {
+  #food .welcome a:hover, .wrap-lr .great-recieps a:hover, #latest-recipes-continer a:hover {
     -webkit-transition: .2s ease-in-out;
     -o-transition: .2s ease-in-out;
     transition: .2s ease-in-out; }
@@ -8922,11 +8924,10 @@ h2 {
         -ms-flex-preferred-size: 35%;
             flex-basis: 35%;
     margin-bottom: 50px; }
-  .wrap .great-recieps {
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-top: 110px; }
-  .wrap .great-recieps p {
+  .wrap-lr .great-recieps {
+    margin-top: 110px;
+    margin-bottom: 110px; }
+  .wrap-lr .great-recieps p {
     margin-bottom: 44px; } }
 
 /* Small Devices, Tablets */
@@ -8968,7 +8969,7 @@ h2 {
         -ms-flex-preferred-size: 55%;
             flex-basis: 55%;
     margin-bottom: 50px; }
-  .wrap .great-recieps .h2-zagoolovo {
+  .wrap-lr .great-recieps .h2-zagoolovo {
     font-size: 0.7em; } }
 
 /* Extra Small Devices, Phones */
