@@ -1,6 +1,10 @@
 @import "fonts"
 @import "vars"
 @import "libs"
+@import url('https://fonts.googleapis.com/css?family=Open+Sans')
+@import url('https://fonts.googleapis.com/css?family=Merriweather:700')
+@import url('https://fonts.googleapis.com/css?family=Merriweather:900')
+
 
 body
   margin: 0
@@ -131,6 +135,13 @@ h6
       margin: auto
       border-radius: 1px
 
+.hamburger:hover
+  opacity: 1
+  .hamburger-box
+    .hamburger-inner, .hamburger-inner:after, .hamburger-inner:before
+      background-color: $Green_color
+      transition: ease all .3s
+
 .hamburger-inner
   top: 46.5%
 
@@ -197,6 +208,200 @@ h2
   width: 450px
   height: 250px
 
+.recipes
+  background-repeat: no-repeat
+  background-size: cover
+  background-position: center
+
+#recipes-continer
+  text-align: center
+  height: auto
+  width: auto
+
+
+.great-recieps
+  display: inline-block
+  vertical-align: middle
+  text-align: center
+  padding-top: 130px
+  p
+    margin-top: 60px
+    font-size: 0.8em
+    line-height: 22px
+    color: #2d2e2e
+
+.wrap-recieps
+  margin-top: 60px
+  padding-bottom: 100px
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  .recieps-item
+    width: 250px
+    margin: 15px 15px 0px 15px
+    img
+      width: 100%
+      height: auto
+
+.great-recieps
+  .h2-zagoolovo::after
+    content: ''
+    display: inline-block
+    vertical-align: middle
+    box-sizing: border-box
+    width: 17%
+    height: 2px
+    background: #2d2e2e
+    border: solid #FFF
+    border-width: 0 10px
+    margin-top: 30px
+
+.name-recipes
+  padding: 20px 10px 20px 10px
+  color: $Orange_color
+  font-weight: 900
+  font-family: "Merriweather"
+  transition: ease-in-out .1s
+  margin-bottom: 15px
+  background-color: #fff
+  margin-top: -3px
+  &:hover
+    color: $Green_color
+    transition: ease-in-out .1s
+
+#spec-select
+  height: auto
+  text-align: center
+  .great-recieps
+    padding-top: 50px
+    .h2-zagoolovo::after
+      background-color: $Green_color
+      width: 12%
+  .select
+    margin-top: 50px
+    padding-bottom: 30px
+    display: flex
+    justify-content: space-around
+    flex-wrap: wrap
+    .select-item
+      flex-basis: 25%
+      h6
+        margin-top: 10px
+
+.learn
+  background-position: center
+  background-size: cover
+  background-repeat: no-repeat
+
+#learn-cook
+  height: auto
+
+.wrap
+  padding: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  .great-recieps
+    margin-top: 60px
+    padding-bottom: 100px
+    margin-bottom: 60px
+    .h2-zagoolovo
+      color: #fff
+      &::after
+        display: none
+    p
+      margin-bottom: 65px
+      color: #fff
+    a
+      @extend %button
+      background-color: $Orange_color
+      &:hover
+        background-color: #fff
+        color: $Orange_color
+
+#latest-recipes-continer
+  height: auto
+  a
+    @extend %button
+    background-color:  $Green_color
+    &:hover
+      background-color: $Orange_color
+
+.h2-zagoolovo
+  text-align: center
+  margin-top: 60px
+  &::after
+    content: ''
+    display: inline-block
+    vertical-align: middle
+    box-sizing: border-box
+    width: 6%
+    height: 2px
+    background: $Green_color
+    border: solid #FFF
+    border-width: 0 10px
+    margin-top: 30px
+    margin-bottom: 50px
+
+.wrapper
+  margin: 0 auto
+  width: 85%
+
+.wrap-recip
+  display: flex
+  justify-content: space-around
+  flex-wrap: wrap
+
+.namewrap
+  margin-top: -2px
+  display: flex
+
+.date
+  min-width: 80px
+  text-align: center
+  background-color: #2d2e2e
+  color: #fff
+  line-height: 1.3
+  padding: 2px 6px 6px 6px
+  h6
+    font-size: 1.6em
+    font-family: "Helvetica"
+    font-weight: 900
+  h5
+    font-size: 0.8em
+    font-weight: normal
+    line-height: 1.5
+  h4
+    font-size: 0.8em
+    font-family: "Open Sans"
+    font-weight: 900
+    line-height: 1.6
+
+
+.name-two
+  display: flex
+  flex-direction: column
+  justify-content: space-around
+  margin-left: 20px
+  padding: 10px 0 10px 0
+  p
+    font-size: 0.8em
+    color: #888
+  span
+    font-size: 0.96em
+    font-weight: 900
+    color: $Orange_color
+  .fa
+    color: $Orange_color
+    margin-right: 10px
+
+.resipe-items-lat
+  margin-bottom: 50px
+
+.but
+  text-align: center
+  margin-top: 20px
+  margin-bottom: 65px
 
 
 @import "media" // Всегда в конце
