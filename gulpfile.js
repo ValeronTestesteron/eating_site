@@ -15,6 +15,7 @@ var gulp         = require('gulp'), // Подключаем Gulp
 gulp.task('sass', function(){ // Создаем таск Sass
     return gulp.src('app/sass/**/*.sass') // Берем источник
         .pipe(sass()) // Преобразуем Sass в CSS посредством gulp-sass
+        .pipe(autoprefixer(['last 15 versions']))
         .pipe(gulp.dest('app/css')) // Выгружаем результата в папку app/css
         .pipe(browserSync.reload({stream: true})) // Обновляем CSS на странице при изменении
 });
@@ -58,8 +59,7 @@ gulp.task('build', ['removedist', 'imagemin', 'sass'], function() {
 		'app/css/main.css',
 		])
     .pipe(rename({suffix: '.min', prefix : ''}))
-	  .pipe(autoprefixer(['last 15 versions']))
-	  .pipe(cleanCSS()) // Опционально, закомментировать при отладке
+	  .pipe(cleanCSS())
     .pipe(gulp.dest('dist/css'));
 
 	var buildFonts = gulp.src([

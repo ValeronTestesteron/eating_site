@@ -214,6 +214,8 @@
               <div class="namewrap">
               <div class="date"> <h6>5</h6><h5>June</h5><h4>5:00pm</h4></div>
               <div class="name-two">
+
+
                 <div class="namerec"><span>Seafood Fettuccine</span></div>
                 <div class="name">
                   <p><i class="fa fa-user-o" aria-hidden="true"></i>
@@ -227,6 +229,32 @@
         </div>
       </div>
     </div>
+    <div class="personal" style="background-image: url(https://livedemo00.template-help.com/wt_61184/images/parallax-03.jpg)">
+      <div id="personal-continer" class="conteiner">
+        <div class="owl-carousel carousel-rewiews">
+          <div class="review">
+            <div class="review-text">I have made over 10 recipes from your website - all of them have been very tasty. I’ve recently tried your chicken chili - it’s delicious! I just wanted to thank you for posting these recipes, making easy-to-follow directions and overall being an amazing support!
+              <div class="review-sub-text"><h3>Debra Banks</h3>
+                <p>Cooking Enthusiast, Los Angeles, CA</p>
+              </div>
+            </div>
+            <div class="review-img">
+              <img src="https://livedemo00.template-help.com/wt_61184/images/users/user-debra-banks-230x230.jpg" alt="">
+            </div>
+          </div>
+          <div class="review">
+            <div class="review-text">I made your Middle Eastern Chicken Kebabs and the Basmati Pilaf recipes last night. They were a massive hit and I have also discovered other interesting recipes on your website. Thank you!
+              <div class="review-sub-text"><h3>Steven Alvarez</h3>
+                <p>Professional Cook, Seattle, WA</p>
+              </div>
+            </div>
+            <div class="review-img">
+              <img src="https://livedemo00.template-help.com/wt_61184/images/users/user-steven-alvarez-230x230.jpg" alt="">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 
   <div id="my-footer"></div>
@@ -236,6 +264,7 @@
 <script src="js/common.js"></script>
 <script src="libs/jquery/dist/jquery.min.js"></script>
 <script src="libs/jQuery.mmenu/dist/jquery.mmenu.all.js"></script>
+<script src="libs/owl.carousel/dist/owl.carousel.min.js"></script>
 <script>
 $("#my-menu").mmenu({
   offCanvas: {
@@ -254,6 +283,12 @@ $("#my-menu").mmenu({
   api.bind('close:finish', function() {
     $('.hamburger').removeClass('is-active');
   });
+
+  $(".carousel-rewiews").owlCarousel({
+    items: 1,
+    loop: true,
+  });
+
 </script>
 </body>
 </html>
