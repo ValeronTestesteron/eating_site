@@ -482,5 +482,57 @@ h2
         background-color: $Orange_color
         transform: scale(1.51)
 
+.posts
+  background-color: rgb(245, 247, 250)
+  #posts-continer
+    height: auto
+    max-width: 95%
+    width: 90%
+    min-width: 86%
+    .posts-wrap
+      .h2-zagoolovo
+        margin-top: 0
+        padding-top: 60px
+      .posts-items-wrap
+        display: flex
+        justify-content: center
+        flex-wrap: wrap
+        margin: 0 -25px 0 -25px
+      .posts-item
+        overflow: hidden
+        background-color: #fff
+        max-width: 320px
+        margin: 0 15px 0 15px
+        margin-bottom: 25px
+        .posts-text
+          padding: 25px 25px 25px 25px
+          margin-top: -2px
+          img
+            width: 100%
+          h6
+            color: $Orange_color
+            font-size: 1.05em
+            margin-bottom: 15px
+            line-height: 1.2em
+          p
+            font-size: 0.81em
+            color: #888
+            line-height: 1.5em
+            margin-bottom: 15px
+          .fa
+            color: $Green_color
+            font-weight: bold
+          span
+            font-size: 0.9em
+            font-style: italic
+          a :hover
+            color: $Green_color
+            transition: .5s ease
+
+  .but
+    @extend %button
+    background-color:  $Green_color
+    &:hover
+      background-color: $Orange_color
 
 @import "media" // Всегда в конце

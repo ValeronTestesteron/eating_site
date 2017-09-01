@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans");
 @import url("https://fonts.googleapis.com/css?family=Merriweather:700");
 @import url("https://fonts.googleapis.com/css?family=Merriweather:900");
-#food .welcome a, .wrap-lr .great-recieps a, #latest-recipes-continer a {
+#food .welcome a, .wrap-lr .great-recieps a, #latest-recipes-continer a, .posts .but {
   margin-top: 20px;
   color: #fff;
   font-size: .9em;
@@ -10,7 +10,7 @@
   -webkit-transition: .2s ease-in-out;
   -o-transition: .2s ease-in-out;
   transition: .2s ease-in-out; }
-  #food .welcome a:hover, .wrap-lr .great-recieps a:hover, #latest-recipes-continer a:hover {
+  #food .welcome a:hover, .wrap-lr .great-recieps a:hover, #latest-recipes-continer a:hover, .posts .but:hover {
     -webkit-transition: .2s ease-in-out;
     -o-transition: .2s ease-in-out;
     transition: .2s ease-in-out; }
@@ -9078,11 +9078,71 @@ h2 {
     transition: background-color .5s ease, transform .5s ease, -webkit-transform .5s ease; }
     .carousel-rewiews .owl-dots .owl-dot.active {
       background-color: #ef800d;
-      -webkit-transform: scale(1.5);
-          -ms-transform: scale(1.5);
-              transform: scale(1.5); }
+      -webkit-transform: scale(1.51);
+          -ms-transform: scale(1.51);
+              transform: scale(1.51); }
 
-#food .welcome a, .wrap-lr .great-recieps a, #latest-recipes-continer a {
+.posts {
+  background-color: #f5f7fa; }
+  .posts #posts-continer {
+    height: auto;
+    max-width: 95%;
+    width: 90%;
+    min-width: 86%; }
+    .posts #posts-continer .posts-wrap .h2-zagoolovo {
+      margin-top: 0;
+      padding-top: 60px; }
+    .posts #posts-continer .posts-wrap .posts-items-wrap {
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center;
+      -webkit-flex-wrap: wrap;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+      margin: 0 -25px 0 -25px; }
+    .posts #posts-continer .posts-wrap .posts-item {
+      overflow: hidden;
+      background-color: #fff;
+      max-width: 320px;
+      margin: 0 15px 0 15px;
+      margin-bottom: 25px; }
+      .posts #posts-continer .posts-wrap .posts-item .posts-text {
+        padding: 25px 25px 25px 25px;
+        margin-top: -2px; }
+        .posts #posts-continer .posts-wrap .posts-item .posts-text img {
+          width: 100%; }
+        .posts #posts-continer .posts-wrap .posts-item .posts-text h6 {
+          color: #ef800d;
+          font-size: 1.05em;
+          margin-bottom: 15px;
+          line-height: 1.2em; }
+        .posts #posts-continer .posts-wrap .posts-item .posts-text p {
+          font-size: 0.81em;
+          color: #888;
+          line-height: 1.5em;
+          margin-bottom: 15px; }
+        .posts #posts-continer .posts-wrap .posts-item .posts-text .fa {
+          color: #749c07;
+          font-weight: bold; }
+        .posts #posts-continer .posts-wrap .posts-item .posts-text span {
+          font-size: 0.9em;
+          font-style: italic; }
+        .posts #posts-continer .posts-wrap .posts-item .posts-text a :hover {
+          color: #749c07;
+          -webkit-transition: .5s ease;
+          -o-transition: .5s ease;
+          transition: .5s ease; }
+  .posts .but {
+    background-color: #749c07; }
+    .posts .but:hover {
+      background-color: #ef800d; }
+
+#food .welcome a, .wrap-lr .great-recieps a, #latest-recipes-continer a, .posts .but {
   margin-top: 20px;
   color: #fff;
   font-size: .9em;
@@ -9091,7 +9151,7 @@ h2 {
   -webkit-transition: .2s ease-in-out;
   -o-transition: .2s ease-in-out;
   transition: .2s ease-in-out; }
-  #food .welcome a:hover, .wrap-lr .great-recieps a:hover, #latest-recipes-continer a:hover {
+  #food .welcome a:hover, .wrap-lr .great-recieps a:hover, #latest-recipes-continer a:hover, .posts .but:hover {
     -webkit-transition: .2s ease-in-out;
     -o-transition: .2s ease-in-out;
     transition: .2s ease-in-out; }
