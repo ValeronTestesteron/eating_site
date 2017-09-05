@@ -42,6 +42,54 @@ header
   height: 100vh
   max-width: 1200px
 
+.preloader
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 100
+  background-color: #323232
+
+@mixin opacity($opacity)
+  opacity: $opacity / 100
+  filter: alpha(opacity=$opacity)
+
+.pulse
+  position: relative
+  left: 50%
+  top: 50vh
+  margin-left: -40px
+  margin-right: -40px
+  &::before, &::after
+    content: ''
+    border: 5px solid rgb(67, 67, 69)
+    width: 80px
+    height: 80px
+    border-radius: 50px
+    position: absolute
+  &::before
+    animation: pulse-outer .8s ease-in infinite
+  &::after
+    animation: pulse-inner .8s linear infinite
+
+@keyframes pulse-outer
+  0%
+    @include opacity(100)
+  50%
+    @include opacity(50)
+  100%
+    @include opacity(0)
+
+@keyframes pulse-inner
+  0%
+    @include opacity(0)
+    transform: scale(0)
+  100%
+    @include opacity(100)
+    transform: scale(1)
+
+
 .line-menu
   display: none
 
@@ -486,9 +534,7 @@ h2
   background-color: rgb(245, 247, 250)
   #posts-continer
     height: auto
-    max-width: 95%
     width: 90%
-    min-width: 86%
     .posts-wrap
       .h2-zagoolovo
         margin-top: 0
@@ -501,7 +547,8 @@ h2
       .posts-item
         overflow: hidden
         background-color: #fff
-        max-width: 320px
+        max-width: 350px
+        min-width: 270px
         margin: 0 15px 0 15px
         margin-bottom: 25px
         .posts-text
@@ -529,10 +576,48 @@ h2
             color: $Green_color
             transition: .5s ease
 
-  .but
+  .posts-img
+    img
+      width: 100%
+
+  .button
     @extend %button
-    background-color:  $Green_color
+    background-color: $Orange_color
     &:hover
-      background-color: $Orange_color
+      background-color: $Green_color
+
+  .but
+    margin-bottom: 0
+    padding-bottom: 100px
+
+
+#galery-conteiner
+  height: auto
+  width: 97%
+
+.galery-item
+  max-height: 300px
+  a
+    color: black
+    & :hover
+
+
+.top
+  position: fixed
+  bottom: -80px
+  right: 20px
+  background-color: rgb(67, 67, 69)
+  color: #fff
+  width: 45px
+  height: 45px
+  text-align: center
+  line-height: 43px
+  cursor: pointer
+  transition: all .4s ease
+  &:hover
+    background-color: $Orange_color
+  &.active
+    bottom: 25px
+
 
 @import "media" // Всегда в конце

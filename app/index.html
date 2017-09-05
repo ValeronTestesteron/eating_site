@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
+
+<div class="preloader"><div class="pulse"></div></div>
+
 <div id="my-page">
 
   <div id="my-header">
@@ -261,7 +264,9 @@
           <div class="h2-zagoolovo"><h2>Latest Posts</h2></div>
           <div class="posts-items-wrap">
           <div class="posts-item">
+            <div class="posts-img">
             <img src="https://livedemo00.template-help.com/wt_61184/images/blog/news-04-770x500.jpg" alt="">
+            </div>
               <div class="posts-text">
                 <a href="#"><h6>10 Seafood Recipes You’ll Ever Need</h6></a>
                 <p>Seafood’s one of those ingredients that not everyone feels comfortable cooking. There’s always something that puts people off.</p>
@@ -270,7 +275,9 @@
               </div>
           </div>
           <div class="posts-item">
+            <div class="posts-img">
             <img src="https://livedemo00.template-help.com/wt_61184/images/blog/news-08-420x270.jpg" alt="">
+            </div>
               <div class="posts-text">
                 <a href="#"><h6>Packing a Sandwich that Won’t be Sad and Soggy by Lunchtime</h6></a>
                 <p>Last week we reflected on just how terrible a pathetic, soggy salad tastes. And let us tell you, what we depicted there is also about sandwiches.</p>
@@ -279,7 +286,9 @@
               </div>
           </div>
           <div class="posts-item">
+            <div class="posts-img">
             <img src="https://livedemo00.template-help.com/wt_61184/images/blog/news-02-420x270.jpg" alt="">
+            </div>
               <div class="posts-text">
                 <a href="#"><h6>5 Favorite Weeknight Dinners That You’ll Love</h6></a>
                 <p>If you need a healthy mid-week dinner idea, you’ve come to the right place. Here are 5 recipes that are a part of our regular dinner rotation.</p>
@@ -288,7 +297,9 @@
               </div>
           </div>
           <div class="posts-item">
+            <div class="posts-img">
             <img src="https://livedemo00.template-help.com/wt_61184/images/blog/news-05-370x240.jpg" alt="">
+              </div>
               <div class="posts-text">
                 <a href="#"><h6>15 Minute Baked Tilapia with Watermelon-Habanero Salsa</h6></a>
                 <p>Today’s simple plan to healthier eating comes in the form of 15 Minute Baked Tilapia with Salsa.</p>
@@ -297,7 +308,9 @@
               </div>
           </div>
           <div class="posts-item">
-            <img src="https://livedemo00.template-help.com/wt_61184/images/blog/news-09-420x270.jpg" alt="">
+            <div class="posts-img">
+              <img src="https://livedemo00.template-help.com/wt_61184/images/blog/news-09-420x270.jpg" alt="">
+            </div>
               <div class="posts-text">
                 <a href="#"><h6>8 Unique Skewers To Grill Right Now</h6></a>
                 <p>Today we would like to present you our top 8 skewers that you should definitely try this summer. They are easy-to-cook and very tasty!</p>
@@ -306,7 +319,9 @@
               </div>
           </div>
           <div class="posts-item">
-            <img src="https://livedemo00.template-help.com/wt_61184/images/blog/news-05-420x270.jpg" alt="">
+              <div class="posts-img">
+              <img src="https://livedemo00.template-help.com/wt_61184/images/blog/news-05-420x270.jpg" alt="">
+              </div>
               <div class="posts-text">
                 <a href="#"><h6>Strawberry Peach Rose Sangria</h6></a>
                 <p>Our new recipe is a necessity for any summer soiree. Plus it makes you feel super fab when you sip something pink like this Rosé Sangria.</p>
@@ -315,7 +330,20 @@
               </div>
           </div>
           </div>
-          <div class="but"><a href="#" class="button">View All Latest Recipes</a></div>
+          <div class="but">
+            <a href="#" class="button">View All News Posts</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="galery">
+      <div id="galery-conteiner" class="conteiner">
+        <div class="owl-carousel carousel-galery">
+          <div class="galery-item"><a href="https://farm8.staticflickr.com/7574/28847098514_cee41ce4ed_c.jpg"><img src="https://farm8.staticflickr.com/7574/28847098514_cee41ce4ed_z.jpg" alt=""></a></div>
+          <div class="galery-item"><img src="https://farm9.staticflickr.com/8180/29437264556_80209a6560_z.jpg" alt=""></a></div>
+          <div class="galery-item"><img src="https://farm9.staticflickr.com/8335/29183123230_da865015eb_z.jpg" alt=""></a></div>
+          <div class="galery-item"><img src="https://farm9.staticflickr.com/8177/28849684113_de3df66a46_z.jpg" alt=""></a></div>
+          <div class="galery-item"><img src="https://farm8.staticflickr.com/7752/29437262906_c852280741_z.jpg" alt=""></a></div>
         </div>
       </div>
     </div>
@@ -325,12 +353,16 @@
 
 </div>
 
+<div class="top" title="Наверх"><i class="fa fa-angle-up"></i></div>
+
 <script src="js/common.js"></script>
 <script src="libs/jquery/dist/jquery.min.js"></script>
 <script src="libs/jQuery.mmenu/dist/jquery.mmenu.all.js"></script>
 <script src="libs/owl.carousel/dist/owl.carousel.min.js"></script>
+<script src="libs/photoswipe/dist/photoswipe.min.js"></script>
 <script>
-$("#my-menu").mmenu({
+  $("#my-menu").mmenu({
+    extensions: ["pagedim-black"],
   offCanvas: {
     position: 'right'
   },
@@ -351,6 +383,41 @@ $("#my-menu").mmenu({
   $(".carousel-rewiews").owlCarousel({
     items: 1,
     loop: true,
+  });
+
+  $(".carousel-galery").owlCarousel({
+    items: 4,
+    loop: true,
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1
+      },
+      500: {
+        items: 2
+      },
+      800: {
+        items: 3
+      },
+      1000: {
+        items: 4
+      }
+    }
+  });
+
+  $(window).scroll(function (){
+    if ($(this).scrollTop() >= $(this).height()){
+      $('.top').addClass('active');
+    } else {
+      $('.top').removeClass('active');
+    }
+  });
+  $('.top').click(function () {
+    $('html, body').stop().animate({scrollTop: 0}, 'slow', 'swing');
+  });
+
+  $(window).on('load', function(){
+    $('.preloader').delay(1000).fadeOut('slow');
   });
 
 </script>
