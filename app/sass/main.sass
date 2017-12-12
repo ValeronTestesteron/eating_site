@@ -1,6 +1,5 @@
 ﻿@import "fonts"
 @import "vars"
-@import "libs"
 @import url('https://fonts.googleapis.com/css?family=Open+Sans')
 @import url('https://fonts.googleapis.com/css?family=Merriweather:700')
 @import url('https://fonts.googleapis.com/css?family=Merriweather:900')
@@ -167,9 +166,10 @@ h6
       transition: .2s ease-in-out
 
 .hamburger
-  position: absolute
+  position: fixed
   top: 38px
   right: 0
+  z-index: 2
   .hamburger-box
     width: 45px
     height: 45px
@@ -201,6 +201,7 @@ h6
   bottom: -7px
 
 .mm-navbar
+  padding: 0 20px
   height: auto
   position: relative
   border: 0
@@ -208,7 +209,7 @@ h6
     padding: 0
     img
       width: 89px
-      height: auto
+      height: 89px
 
 .mm-panels > .mm-panel:after, .mm-panels > .mm-panel:before
   height: 0
@@ -224,6 +225,17 @@ h6
   color: $Orange_color
   font-weight: bold
   transition: .2s ease
+
+.mm-panels>.mm-panel
+  padding: 0 40px
+
+.mm-menu.mm-offcanvas.mm-front.mm-right, .mm-menu.mm-offcanvas.mm-next.mm-right
+  max-width: 250px
+
+#mm-2
+  .mm-listview
+    margin-top: 20px
+
 
 h2
   font-weight: 700
